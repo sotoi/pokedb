@@ -89,3 +89,8 @@ npm run ios
 
 ```
 scan QR code in terminal using expoApp
+
+## Documentation
+
+[Quick Start Guide For Expo](https://docs.expo.dev/guides/)<br />
+[PokeApi](https://pokeapi.co/)
