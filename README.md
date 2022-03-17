@@ -11,15 +11,59 @@ in a 48 hour time period to test my scoping and development capabilities.
 * Find Information on that region
 ![App Screenshot](http://g.recordit.co/CrhPMMrkRD.gif)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Pokemon Details
 * Select Pokemon See description and basic stats
 * Pressing an evolution takes you to the Pokemon
 
 ![App Screenshot](http://g.recordit.co/kYk9I6bTqa.gif)
 
+
+
+
+
+
+
+
+
+
+
 ## Search
 * Find Pokemon by name out of 1000+ Pokemon
 ![App Screenshot](http://g.recordit.co/1irn1we2Oc.gif)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Installation
