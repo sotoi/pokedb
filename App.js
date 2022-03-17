@@ -35,8 +35,6 @@ export default function App() {
     <PokContext.Provider value={{allPokemon, filteredPokemon, setFilteredPokemon}}>
     <NavigationContainer>
       <Tab.Navigator
-
-
       screenOptions={{
         tabBarStyle: {
           borderTopWidth: 0
@@ -44,17 +42,17 @@ export default function App() {
         tabBarInactiveBackgroundColor:'#1F1F1F',
         tabBarActiveBackgroundColor:'#1F1F1F',
       }}
-        initialRouteName="Library">
+        initialRouteName="Regions">
 
          <Tab.Screen name='Regions' component={Regions}
         options={{ tabBarIcon: () => (
           <Ionicons name="map-sharp" size={24} color='#D2D2D2' />
          ),
           title: 'Regions', headerTintColor:'#D2D2D2', headerStyle:{backgroundColor:'#1F1F1F' }}}></Tab.Screen>
-         <Tab.Screen name='Library' component={Library}
+         {/* <Tab.Screen name='Library' component={Library}
         options={{ tabBarIcon: () => (
          <Ionicons name="book" size={24} color='#D2D2D2' />
-        ),title: 'Library', headerTintColor:'#D2D2D2', headerStyle:{backgroundColor:'#1F1F1F' }}}></Tab.Screen>
+        ),title: 'Library', headerTintColor:'#D2D2D2', headerStyle:{backgroundColor:'#1F1F1F' }}}></Tab.Screen> */}
         <Tab.Screen name='Browse' component={Browse}
         options={{ tabBarIcon: () => (
           <Ionicons name="search" size={24} color='#D2D2D2' />

@@ -3,26 +3,25 @@ import { useEffect, useState } from 'react';
 import {Text, View, Image, StyleSheet,ScrollView, FlatList,Pressable} from 'react-native';
 import Evolutions from '../helpers/Evolutions';
 import PokemonTypes from '../helpers/PokemonTypes';
+
 export default function PokemonDetails({route, navigation}){
   const [evolutions, setEvolutions] = useState([])
   const {species,description} = route.params;
-  useEffect(()=> {
+  useEffect(async ()=> {
      axios.get(description.data.evolution_chain.url).then(chain=>setEvolutions(Evolutions(chain.data)))
      const unsubscribe = navigation.addListener('beforeRemove', e => {
       e.preventDefault(); // Prevent default action
       unsubscribe() // Unsubscribe the event on first call to prevent infinite loop
       navigation.navigate('BrowsePokemon') // Navigate to your desired screen
     });
+
   },[])
+
   const renderItem = (pokemon) => (
     <Pressable onPress={() => axios.get(pokemon.item.url).then((res)=> {
       axios.get(res.data.species.url).then(result=>{navigation.push('PokemonDetails', {species:res, description:result})})
     }) }>
-      <View>
-
         <Image style={styles.sprite} source={{uri:pokemon.item.photo}}/>
-
-      </View>
       </Pressable>
   );
   const loadEvolutions =()=>{
@@ -45,14 +44,13 @@ export default function PokemonDetails({route, navigation}){
 
   }
   return(
-
     <View style= {styles.container}>
       <ScrollView style= {styles.contrast}>
       {/* Image */}
       <Image style= {styles.pokemonImage} source={{uri:species.data.sprites.other["official-artwork"].front_default}}/>
       {/* Types */}
       <Text style= {styles.pokemonText}> {species.data.forms[0].name}</Text>
-      <View style={styles.typesContainer}>
+       <View style={styles.typesContainer}>
         {species.data.types.map((type,i)=><Text key={i} style={[styles.type,{backgroundColor:PokemonTypes[type.type.name]}]}>{type.type.name}</Text>)}
       </View>
       {/* Name And description */}
@@ -73,10 +71,6 @@ export default function PokemonDetails({route, navigation}){
          })}
        </View>
        {loadEvolutions()}
-
-
-
-
        </ScrollView>
     </View>
     )
