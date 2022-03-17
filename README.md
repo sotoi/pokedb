@@ -7,7 +7,7 @@ in a 48 hour time period to test my scoping and development capabilities.
 ## :heavy_check_mark: Features
 
 ### Regions
-* Select A Regions
+* Select A region
 * Find Information on that region  
 
 ![App Screenshot](http://g.recordit.co/CrhPMMrkRD.gif)
@@ -34,7 +34,7 @@ in a 48 hour time period to test my scoping and development capabilities.
 
 
 ### Pokemon Details
-* Select Pokemon See description and basic stats
+* Select Pokemon, see description and basic stats
 * Pressing an evolution takes you to the Pokemon  
 
 ![App Screenshot](http://g.recordit.co/kYk9I6bTqa.gif)
