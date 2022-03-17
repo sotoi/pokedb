@@ -88,8 +88,11 @@ on ios emulator
 npm run ios
 
 ```
-scan QR code in terminal using expoApp
+Pokedb requires Expo Go:
 
+- Download Expo Go on your mobile device
+- Under the tool section, Tap on "Scan QR Code"
+- Scan QR code located in the terminal where npm start was ran
 ## Documentation
 
 [Quick Start Guide For Expo](https://docs.expo.dev/guides/)<br />
