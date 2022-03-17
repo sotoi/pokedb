@@ -7,8 +7,8 @@ in a 48 hour time period to test my scoping and development capabilities.
 ## :heavy_check_mark: Features
 
 ### Regions
-* Select A region
-* Find Information on that region  
+* Select a region
+* Find information on that region  
 
 ![App Screenshot](http://g.recordit.co/CrhPMMrkRD.gif)
 
