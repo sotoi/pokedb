@@ -1,93 +1,77 @@
+# PokéDB
 
-# Pokedb
+A React Native Pokédex application featuring region data and evolutions.  
+This project was developed in a 48-hour time period to test my scoping and development capabilities.
 
-A react native Pokedex application with regions  data and evolutions. This project was done
-in a 48 hour time period to test my scoping and development capabilities.
+---
 
-## :heavy_check_mark: Features
+## ✅ Features
 
-### Regions
-* Select a region
-* Find information on that region  
+### 🌎 Regions
+- Select a region
+- Find information about that region
 
-![CrhPMMrkRD](https://github.com/user-attachments/assets/acc9ca3e-f91a-44bc-9537-0552713fb088)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/acc9ca3e-f91a-44bc-9537-0552713fb088" alt="Region Screenshot" width="400"/>
+</p>
 
+---
 
+### 🐾 Pokémon Details
+- Select Pokémon to see description and basic stats
+- Tap an evolution to navigate to that Pokémon
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/92adfbd1-ce81-41c2-8971-d350ee565aac" alt="Pokémon Details Screenshot" width="400"/>
+</p>
 
+---
 
+### 🔍 Search
+- Find Pokémon by name out of 1000+ Pokémon
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c9b6193b-4f01-4cd3-bf11-989f7ba032f9" alt="Search Screenshot" width="400"/>
+</p>
 
+---
 
+## 🚀 Installation
 
-
-
-
-
-
-
-
-
-
-
-### Pokemon Details
-* Select Pokemon, see description and basic stats
-* Pressing an evolution takes you to the Pokemon
-  
-![kYk9I6bTqa](https://github.com/user-attachments/assets/92adfbd1-ce81-41c2-8971-d350ee565aac)
-
-
-
-
-
-
-
-### Search
-* Find Pokemon by name out of 1000+ Pokemon  
-
-![1irn1we2Oc](https://github.com/user-attachments/assets/c9b6193b-4f01-4cd3-bf11-989f7ba032f9)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Installation
-
-Clone repository
+Clone the repository and install dependencies:
 
 ```bash
-  cd pokedb
-  npm install
+git clone https://github.com/sotoi/pokedb.git
+cd pokedb
+npm install
 ```
 
-## Usage/Examples
-on android emulator
+---
+
+## ▶️ Usage
+
+### On Android Emulator
 ```bash
 npm run android
-
 ```
-on ios emulator
+
+### On iOS Emulator
 ```bash
 npm run ios
-
 ```
-Pokedb requires Expo Go:
 
-- Download Expo Go on your mobile device
-- Under the tool section, Tap on "Scan QR Code"
-- Scan QR code located in the terminal where npm start was ran
-## Documentation
+### On Physical Device (Expo Go)
 
-[Quick Start Guide For Expo](https://docs.expo.dev/guides/)<br />
-[PokeApi](https://pokeapi.co/)
+1. Download **Expo Go** from your mobile app store.
+2. Run `npm start` in your terminal.
+3. In Expo Go, tap **"Scan QR Code"** under the tools section.
+4. Scan the QR code displayed in your terminal.
 
+---
+
+## 📚 Documentation
+
+- [Expo Quick Start Guide](https://docs.expo.dev/guides/)
+- [PokéAPI Documentation](https://pokeapi.co/)
+
+---
