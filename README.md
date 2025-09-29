@@ -10,10 +10,7 @@ in a 48 hour time period to test my scoping and development capabilities.
 * Select a region
 * Find information on that region  
 
-![App Screenshot](http://g.recordit.co/CrhPMMrkRD.gif)
-
-
-
+![CrhPMMrkRD](https://github.com/user-attachments/assets/acc9ca3e-f91a-44bc-9537-0552713fb088)
 
 
 
@@ -35,13 +32,9 @@ in a 48 hour time period to test my scoping and development capabilities.
 
 ### Pokemon Details
 * Select Pokemon, see description and basic stats
-* Pressing an evolution takes you to the Pokemon  
-
-![App Screenshot](http://g.recordit.co/kYk9I6bTqa.gif)
-
-
-
-
+* Pressing an evolution takes you to the Pokemon
+  
+![kYk9I6bTqa](https://github.com/user-attachments/assets/92adfbd1-ce81-41c2-8971-d350ee565aac)
 
 
 
@@ -52,7 +45,7 @@ in a 48 hour time period to test my scoping and development capabilities.
 ### Search
 * Find Pokemon by name out of 1000+ Pokemon  
 
-![App Screenshot](http://g.recordit.co/1irn1we2Oc.gif)  
+![1irn1we2Oc](https://github.com/user-attachments/assets/c9b6193b-4f01-4cd3-bf11-989f7ba032f9)
 
 
 
@@ -97,3 +90,4 @@ Pokedb requires Expo Go:
 
 [Quick Start Guide For Expo](https://docs.expo.dev/guides/)<br />
 [PokeApi](https://pokeapi.co/)
+
