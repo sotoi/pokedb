@@ -7,7 +7,7 @@ export default function PokemonList({navigation, pokemonData}){
   const renderItem = (pokemon) => (
 
     <Pressable onPress={() => axios.get(pokemon.item.url).then((res)=> {
-      axios.get(res.data.species.url).then(result=>{navigation.navigate('PokemonDetails',{species:res, description:result})})
+      axios.get(res.data.species.url).then(result=>{navigation.navigate('PokemonDetails',{species:res.data, description:result.data})})
     }) }>
       <Pokemon pokemon={pokemon.item} />
       </Pressable>

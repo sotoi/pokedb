@@ -11,7 +11,7 @@ export default function PokemonDetails({route, navigation}){
   useEffect(() => {
     const fetchEvolutions = async () => {
       try {
-        const chain = await axios.get(description.data.evolution_chain.url);
+        const chain = await axios.get(description.evolution_chain.url);
         setEvolutions(Evolutions(chain.data));
       } catch (error) {
         console.error('Error fetching evolutions:', error);
@@ -33,7 +33,7 @@ export default function PokemonDetails({route, navigation}){
 
   const renderItem = (pokemon) => (
     <Pressable onPress={() => axios.get(pokemon.item.url).then((res)=> {
-      axios.get(res.data.species.url).then(result=>{navigation.push('PokemonDetails', {species:res, description:result})})
+      axios.get(res.data.species.url).then(result=>{navigation.push('PokemonDetails', {species:res.data, description:result.data})})
     }) }>
         <Image style={styles.sprite} source={{uri:pokemon.item.photo}}/>
       </Pressable>
@@ -61,17 +61,17 @@ export default function PokemonDetails({route, navigation}){
     <View style= {styles.container}>
       <ScrollView style= {styles.contrast}>
       {/* Image */}
-      <Image style= {styles.pokemonImage} source={{uri:species.data.sprites.other["official-artwork"].front_default}}/>
+      <Image style= {styles.pokemonImage} source={{uri:species.sprites.other["official-artwork"].front_default}}/>
       {/* Types */}
-      <Text style= {styles.pokemonText}> {species.data.forms[0].name}</Text>
+      <Text style= {styles.pokemonText}> {species.forms[0].name}</Text>
        <View style={styles.typesContainer}>
-        {species.data.types.map((type,i)=><Text key={i} style={[styles.type,{backgroundColor:PokemonTypes[type.type.name]}]}>{type.type.name}</Text>)}
+        {species.types.map((type,i)=><Text key={i} style={[styles.type,{backgroundColor:PokemonTypes[type.type.name]}]}>{type.type.name}</Text>)}
       </View>
       {/* Name And description */}
 
-       <Text style= {styles.descriptionText} >{description.data[`flavor_text_entries`].find(el=>el.language.name==='en').flavor_text.replace(/\n/g,' ')}</Text>
+       <Text style= {styles.descriptionText} >{description[`flavor_text_entries`].find(el=>el.language.name==='en').flavor_text.replace(/\n/g,' ')}</Text>
        <View>
-         {species.data.stats.map((stat, i)=>{
+         {species.stats.map((stat, i)=>{
            return(
              <View style={styles.graphContainer} key={i}>
                <View style={{width:110,alignItems:'flex-start'}}>

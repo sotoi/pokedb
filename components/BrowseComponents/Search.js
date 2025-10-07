@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { StyleSheet, View,  } from "react-native";
-import { SearchBar } from 'react-native-elements';
+import { StyleSheet, View, TextInput } from "react-native";
 
 export default function Search({allPokemon,onChangeHandler}) {
   const [search, setSearch] = useState("");
@@ -17,9 +16,11 @@ export default function Search({allPokemon,onChangeHandler}) {
   }
   return (
     <View >
-       <SearchBar
+       <TextInput
+        style={styles.searchBar}
         placeholder="Search Pokemon..."
-        onChangeText={updateSearch}
+        placeholderTextColor="#999"
+        onChangeText={setSearch}
         value={search}
       />
 
@@ -29,7 +30,14 @@ export default function Search({allPokemon,onChangeHandler}) {
 }
 
 const styles = StyleSheet.create({
-
-
+  searchBar: {
+    height: 40,
+    backgroundColor: '#1E1E1E',
+    borderRadius: 20,
+    paddingHorizontal: 15,
+    margin: 10,
+    color: '#D2D2D2',
+    fontSize: 16,
+  }
 })
 

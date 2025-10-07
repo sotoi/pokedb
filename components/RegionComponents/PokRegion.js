@@ -7,7 +7,7 @@ export default function PokRegion({navigation}){
 
     <Pressable onPress={() => {navigation.navigate('RegionInfo',{region:region.item})}}>
 
-      <Region  region={region.item}  />
+      <Region region={region.item} />
       </Pressable>
   );
   return(
