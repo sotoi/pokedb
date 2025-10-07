@@ -1,10 +1,10 @@
 import {View,Text,Image,StyleSheet} from 'react-native';
 
 export default function Pokemon({pokemon}){
-  let url_string= pokemon.item.url.slice(34).replace('/','');
+  let url_string= pokemon.url.slice(34).replace('/','');
   return(
     <View style={styles.pokemonStyle}>
-      <Text style={styles.pokemonText}>{pokemon.item.name}</Text>
+      <Text style={styles.pokemonText}>{pokemon.name}</Text>
       <Image style={styles.imgStyle} source={{uri:`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${url_string}.png`
       }} />
     </View>

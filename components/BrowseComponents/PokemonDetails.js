@@ -7,15 +7,29 @@ import PokemonTypes from '../helpers/PokemonTypes';
 export default function PokemonDetails({route, navigation}){
   const [evolutions, setEvolutions] = useState([])
   const {species,description} = route.params;
-  useEffect(async ()=> {
-     axios.get(description.data.evolution_chain.url).then(chain=>setEvolutions(Evolutions(chain.data)))
-     const unsubscribe = navigation.addListener('beforeRemove', e => {
-      e.preventDefault(); // Prevent default action
-      unsubscribe() // Unsubscribe the event on first call to prevent infinite loop
-      navigation.navigate('BrowsePokemon') // Navigate to your desired screen
-    });
+  
+  useEffect(() => {
+    const fetchEvolutions = async () => {
+      try {
+        const chain = await axios.get(description.data.evolution_chain.url);
+        setEvolutions(Evolutions(chain.data));
+      } catch (error) {
+        console.error('Error fetching evolutions:', error);
+      }
+    };
 
-  },[])
+    fetchEvolutions();
+
+    // Remove the problematic navigation listener that was causing infinite loop
+    // const unsubscribe = navigation.addListener('beforeRemove', (e) => {
+    //   e.preventDefault(); // Prevent default action
+    //   navigation.navigate('BrowsePokemon'); // Navigate to your desired screen
+    // });
+
+    // return () => {
+    //   unsubscribe(); // Cleanup the listener
+    // };
+  }, [])
 
   const renderItem = (pokemon) => (
     <Pressable onPress={() => axios.get(pokemon.item.url).then((res)=> {

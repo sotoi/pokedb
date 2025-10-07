@@ -19,17 +19,20 @@ export default function App() {
 
   const [allPokemon, setAllPokemon] = useState([]);
   const [filteredPokemon, setFilteredPokemon] = useState([]);
-  let getAllPokemon =()=>{
-    axios.get('https://pokeapi.co/api/v2/pokemon?limit=1030')
-      .then((response)=>{
-        setAllPokemon(response.data.results);
-
-      })
+  
+  const getAllPokemon = async () => {
+    try {
+      const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=1030');
+      setAllPokemon(response.data.results);
+      setFilteredPokemon(response.data.results);
+    } catch (error) {
+      console.error('Error fetching Pokemon:', error);
+    }
   }
-  useEffect (() =>{
-    getAllPokemon()
-    setFilteredPokemon(allPokemon);
-  },[])
+  
+  useEffect(() => {
+    getAllPokemon();
+  }, [])
   return (
 
     <PokContext.Provider value={{allPokemon, filteredPokemon, setFilteredPokemon}}>
